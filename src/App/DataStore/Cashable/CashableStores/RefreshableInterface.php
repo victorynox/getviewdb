@@ -13,7 +13,7 @@ interface RefreshableInterface
 
     /**
      * @return null
-     * @throws \Exception
+     * @internal param $limit
      */
     public function refresh();
     

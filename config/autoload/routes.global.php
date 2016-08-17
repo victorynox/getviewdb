@@ -9,16 +9,18 @@ return [
         'factories' => [
             App\Action\HomeAction::class => App\Action\HomeFactory::class,
             zaboy\rest\Pipe\RestPipe::class => App\DataStore\Pipes\Factory\RestPipeFactory::class,
-            App\Action\UpdateDataAction::class => App\Action\UpdateDataFactory::class,
+            'update'=> App\Action\Update\UpdateFactory::class,
         ],
     ],
     'routes' => [
+
         [
-            'name' => 'apt.updatedb',
-            'path' => '/api/updatedb',
-            'middleware' => App\Action\UpdateDataAction::class,
+            'name' => 'apt.update',
+            'path' => '/api/update/{ResourceName}',
+            'middleware' => 'update',
             'allowed_methods' => ['GET'],
         ],
+
         [
             'name' => 'home',
             'path' => '/',

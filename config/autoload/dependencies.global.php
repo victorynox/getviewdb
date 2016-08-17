@@ -28,6 +28,7 @@ return [
             'zaboy\res\DataStores\Factory\HttpClientStoresAbstractFactory',
             'Zend\Db\Adapter\AdapterAbstractServiceFactory',
             'App\DataStore\Cashable\CashableStores\Factory\CashableStoreAbstractFactory',
+            'App\DataStore\Cashable\CashableStore\UnionDbGetAllFactory',
         ]
     ],
 ];

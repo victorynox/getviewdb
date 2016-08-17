@@ -71,6 +71,6 @@ class CashableStoreAbstractFactory  extends DataStoresAbstractFactoryAbstract
             return false;
         }
         $requestedClassName = $config['dataStore'][$requestedName]['class'];
-        return is_a($requestedClassName, 'App\DataStore\Cashable\CashableStore\CashableStore', true);
+        return is_a($requestedClassName, 'App\DataStore\Cashable\CashableStores\CashableStoreAbstract', true);
     }
 }

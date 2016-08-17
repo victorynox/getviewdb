@@ -190,7 +190,7 @@ abstract class CashableStoreAbstract implements RefreshableInterface, DataStores
     public function create($itemData, $rewriteIfExist = false)
     {
         if (method_exists($this->getData, "create")) {
-            return $this->getData->create($itemData, $rewriteIfExist);
+            return $this->getData->create($itemData, true);
         } else {
             throw new \Exception("Refreshable don't haw method create");
         }
@@ -217,7 +217,7 @@ abstract class CashableStoreAbstract implements RefreshableInterface, DataStores
     public function update($itemData, $createIfAbsent = false)
     {
         if (method_exists($this->getData, "update")) {
-            return $this->getData->update($itemData, $createIfAbsent);
+            return $this->getData->update($itemData, true);
         } else {
             throw new \Exception("Refreshable don't haw method delete");
         }
